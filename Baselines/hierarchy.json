@@ -1,0 +1,102 @@
+{
+  "name": "root",
+  "children": [
+    {
+      "name": "功能需求",
+      "children": [
+        {
+          "name": "初始化",
+          "children": []
+        },
+        {
+          "name": "数据采集",
+          "children": []
+        },
+        {
+          "name": "控制输出",
+          "children": []
+        },
+        {
+          "name": "控制计算",
+          "children": [
+            {
+              "name": "姿态控制",
+              "children": []
+            },
+            {
+              "name": "姿态确定",
+              "children": []
+            },
+            {
+              "name": "运行时保障",
+              "children": [
+                {
+                  "name": "故障诊断",
+                  "children": []
+                },
+                {
+                  "name": "数据有效性判断",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "模式管理",
+              "children": []
+            },
+            {
+              "name": "轨道计算",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "遥控",
+          "children": []
+        },
+        {
+          "name": "遥测",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "非功能需求",
+      "children": [
+        {
+          "name": "性能需求",
+          "children": [
+            {
+              "name": "精度约束",
+              "children": []
+            },
+            {
+              "name": "空间约束",
+              "children": []
+            },
+            {
+              "name": "时间约束",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "安全性需求",
+          "children": []
+        },
+        {
+          "name": "可靠性需求",
+          "children": []
+        },
+        {
+          "name": "可复用需求",
+          "children": []
+        },
+        {
+          "name": "可维护需求",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
