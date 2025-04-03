@@ -14,6 +14,10 @@ from typing import List, Dict, Tuple
 from openai import OpenAI
 from tqdm import tqdm
 import pandas as pd
+from rank_bm25 import BM25Okapi
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
+from sklearn.metrics.pairwise import cosine_similarity
 
 def load_tree_from_json(json_file_path):
     with open(json_file_path, 'r', encoding='utf-8') as f:
@@ -49,10 +53,13 @@ def my_cosine_similarity(a,b):
         answer+=a[i]*b[i]
     return answer
 
-tokenizer = AutoTokenizer.from_pretrained('bert-base-chinese')
-model = AutoModel.from_pretrained('bert-base-chinese')
+tokenizer = AutoTokenizer.from_pretrained("BAAI/bge-large-zh-v1.5")
+model = AutoModel.from_pretrained("BAAI/bge-large-zh-v1.5")
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = model.to(device) 
+reranker_tokenizer = AutoTokenizer.from_pretrained("BAAI/bge-reranker-base")
+reranker_model = AutoModelForSequenceClassification.from_pretrained("BAAI/bge-reranker-base").to(device)
+reranker_model.eval()
 def get_embedding_bge(text):
     candidate_inputs = tokenizer(text, padding=True, return_tensors='pt', truncation=True).to(device)
     with torch.no_grad():
@@ -169,6 +176,43 @@ def get_example_from_sampled_data(sampled_data, sampled_embeddings, s, top_k=3):
             f"Answer: {','.join([ans for ans in match[0]['Example']['Correct answer'] if ans])}\n"
         )
     
+    return "\n".join(example_texts)
+
+def get_example_from_sampled_data_bm25_knn_rerank(sampled_data, sampled_embeddings, requirement_text, top_k_bm25=20, top_k_knn=20, top_k_final=3):
+
+    corpus = [entry["Example"]["Description"] for entry in sampled_data]
+    tokenized_corpus = [tokenize_chinese_english(doc).split() for doc in corpus]
+    bm25 = BM25Okapi(tokenized_corpus)
+    query = tokenize_chinese_english(requirement_text).split()
+    bm25_scores = bm25.get_scores(query)
+    bm25_top_indices = np.argsort(bm25_scores)[::-1][:top_k_bm25]
+
+    query_vec = get_embedding_bge(requirement_text).reshape(1, -1)
+    sims = cosine_similarity(sampled_embeddings, query_vec).squeeze()
+    knn_top_indices = np.argsort(sims)[::-1][:top_k_knn]
+
+    merged_indices = list(set(bm25_top_indices).union(set(knn_top_indices)))
+
+    # ===== BGE-Reranker rerank =====
+    rerank_pairs = [(requirement_text, sampled_data[i]["Example"]["Description"]) for i in merged_indices]
+    texts = reranker_tokenizer.batch_encode_plus(rerank_pairs, padding=True, truncation=True, return_tensors='pt').to(device)
+    with torch.no_grad():
+        scores = reranker_model(**texts).logits.squeeze(-1).cpu().numpy()
+
+    reranked = sorted(zip(merged_indices, scores), key=lambda x: x[1], reverse=True)[:top_k_final]
+
+    # ===== Step 5: 构造最终结果 =====
+    example_texts = []
+    for idx, score in reranked:
+        entry = sampled_data[idx]["Example"]
+        desc = entry.get("Description", "")
+        answers = entry.get("Correct answer", [])
+        example_texts.append(
+            f"Requirement Description: {desc}\n"
+            f"Answer: {', '.join([ans for ans in answers if ans])}\n"
+            # f"Score: {score:.4f}\n"  # 如有需要也可加入
+        )
+
     return "\n".join(example_texts)
 
 def extract_json(response_content):
@@ -302,7 +346,7 @@ def multi_choice_recursive_classify(
     queue = deque([start_path_info])
     final_paths = []
 
-    example_text = get_example_from_sampled_data(sampled_data, sampled_embeddings, requirement, top_k=3)
+    example_text = get_example_from_sampled_data_bm25_knn_rerank(sampled_data, sampled_embeddings, requirement)
 
     for depth in range(max_depth):
         if not queue:

@@ -14,7 +14,7 @@ This repository contains the codes for the *TRClass*.
 
 ### Baselines
 - Flat-Sentence: a zero-shot approach that uses a pretrained sentence embedding model to represent the requirement and each leaf class description, then assigns the requirement to the top-$k$ classes. This baseline treats all classes as flat candidates and does not use an LLM.
-- Hier-Sentence}: another baseline uses the hierarchy: it finds the most similar class at Level 1, then within that branch finds the most similar at Level 2, etc., until a leaf is reached. Essentially, it mirrors our taxonomy traversal but uses static embeddings instead of an LLM. 
+- Hier-Sentence: another baseline uses the hierarchy: it finds the most similar class at Level 1, then within that branch finds the most similar at Level 2, etc., until a leaf is reached. Essentially, it mirrors our taxonomy traversal but uses static embeddings instead of an LLM. 
 - TELEClass: the state-of-the-art weakly supervised approach which utilizes an LLM (GPT-based) to generate training data and to score classes. This makes it a fair comparison for our approach, which also does not require labeled data for training.
 
 ### Abalation 

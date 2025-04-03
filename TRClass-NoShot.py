@@ -14,6 +14,10 @@ from typing import List, Dict, Tuple
 from openai import OpenAI
 from tqdm import tqdm
 import pandas as pd
+from rank_bm25 import BM25Okapi
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
+from sklearn.metrics.pairwise import cosine_similarity
 
 def load_tree_from_json(json_file_path):
     with open(json_file_path, 'r', encoding='utf-8') as f:
@@ -49,10 +53,13 @@ def my_cosine_similarity(a,b):
         answer+=a[i]*b[i]
     return answer
 
-tokenizer = AutoTokenizer.from_pretrained('bert-base-chinese')
-model = AutoModel.from_pretrained('Dbert-base-chinese')
+tokenizer = AutoTokenizer.from_pretrained("BAAI/bge-large-zh-v1.5")
+model = AutoModel.from_pretrained("BAAI/bge-large-zh-v1.5")
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = model.to(device) 
+reranker_tokenizer = AutoTokenizer.from_pretrained("BAAI/bge-reranker-base")
+reranker_model = AutoModelForSequenceClassification.from_pretrained("BAAI/bge-reranker-base").to(device)
+reranker_model.eval()
 def get_embedding_bge(text):
     candidate_inputs = tokenizer(text, padding=True, return_tensors='pt', truncation=True).to(device)
     with torch.no_grad():
