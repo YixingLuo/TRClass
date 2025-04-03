@@ -18,6 +18,7 @@ from rank_bm25 import BM25Okapi
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 from sklearn.metrics.pairwise import cosine_similarity
+import faiss  # 添加Faiss库
 
 def load_tree_from_json(json_file_path):
     with open(json_file_path, 'r', encoding='utf-8') as f:
@@ -36,6 +37,7 @@ def find_node_by_path(tree, path):
         if not found:
             return None
     return current_node
+
 def get_child_node(file_name, father):
     base_tree = load_tree_from_json(file_name)
     father_list = father.split('-')
@@ -68,11 +70,11 @@ def get_all_paths(file_name, root):
     traverse(root_node, [])
     return all_paths
 
-def my_cosine_similarity(a,b):
-    answer=0
-    n=len(a)
+def my_cosine_similarity(a, b):
+    answer = 0
+    n = len(a)
     for i in range(n):
-        answer+=a[i]*b[i]
+        answer += a[i] * b[i]
     return answer
 
 tokenizer = AutoTokenizer.from_pretrained("BAAI/bge-large-zh-v1.5")
@@ -82,6 +84,7 @@ model = model.to(device)
 reranker_tokenizer = AutoTokenizer.from_pretrained("BAAI/bge-reranker-base")
 reranker_model = AutoModelForSequenceClassification.from_pretrained("BAAI/bge-reranker-base").to(device)
 reranker_model.eval()
+
 def get_embedding_bge(text):
     candidate_inputs = tokenizer(text, padding=True, return_tensors='pt', truncation=True).to(device)
     with torch.no_grad():
@@ -94,6 +97,7 @@ def tokenize_chinese_english(sentence):
     if isinstance(sentence, dict):  # Ensure we have a string
         sentence = sentence.get("Example", {}).get("Description", "")
     return ' '.join(jieba.cut(sentence))
+
 def compute_rouge_multiple3(references, candidate):
     candidate_tokens = tokenize_chinese_english(candidate)
 
@@ -122,68 +126,44 @@ def compute_rouge_multiple3(references, candidate):
 
     return [max_similarity, mid_similarity, min_similarity], [max_index, mid_index, min_index]
 
-def compute_cosine_multiple3(embedding_finally, embedding):
-
-    dot_products = np.dot(embedding_finally, embedding)
-
-    norms_finally = np.linalg.norm(embedding_finally, axis=1)
-    
-    norm_embedding = np.linalg.norm(embedding)
-    
-    cosine_similarities = dot_products / (norms_finally * norm_embedding)
-
-    top3_indices = np.argsort(cosine_similarities)[::-1][:3]
-    return top3_indices
-
-
-def get_example(memory_finally,s, embedding_finally, merged_tree):
+def get_example(memory_finally, s, faiss_index, merged_tree):
     if not memory_finally:
         return ""
-    embedding = get_embedding_bge(s)
-    index_list = compute_cosine_multiple3(embedding_finally, embedding)
+    
+    # 使用Faiss进行检索
+    embedding = get_embedding_bge(s).astype('float32').reshape(1, -1)
+    _, index_list = faiss_index.search(embedding, 3)  # 获取前3个最相似的索引
+    index_list = index_list[0]  # 展平结果
 
     answer = ""
     for i in range(len(index_list)):
-        answer += "Example " + str(i) + "\\n"
+        answer += "Example " + str(i) + "\n"
         max_index = index_list[i]
-
-        answer += "Requirement Description:"+memory_finally[max_index]["Description"]+ "\\n Answer: " + ','.join(memory_finally[max_index]["Correct answer"])+ "\\n"
-
+        answer += "Requirement Description:" + memory_finally[max_index]["Description"] + "\n Answer: " + ','.join(memory_finally[max_index]["Correct answer"]) + "\n"
 
     return answer
 
-def get_example_from_sampled_data(sampled_data, sampled_embeddings, s, top_k=3):
-    """Retrieve the top_k most similar examples from sampled_data.json."""
+def get_example_from_sampled_data(sampled_data, faiss_index, s, top_k=3):
+    """Retrieve the top_k most similar examples from sampled_data.json using Faiss."""
     if not sampled_data:
         return ""
     
-    embedding = get_embedding_bge(s)
-    scores = []
-    
-    for idx, entry in enumerate(sampled_data):
-        example_text = entry.get("Example", {}).get("Description", "")
-        example_embedding = sampled_embeddings[idx]
-        
-        score = np.dot(embedding, example_embedding) / (
-            np.linalg.norm(embedding) * np.linalg.norm(example_embedding)
-        )
-        
-        scores.append((entry, score))
-    
-    # Sort by similarity score in descending order and take top_k examples
-    top_matches = sorted(scores, key=lambda x: x[1], reverse=True)[:top_k]
+    embedding = get_embedding_bge(s).astype('float32').reshape(1, -1)
+    _, indices = faiss_index.search(embedding, top_k)
+    indices = indices[0]  # 展平结果
     
     example_texts = []
-    for match in top_matches:
+    for idx in indices:
+        entry = sampled_data[idx]
         example_texts.append(
-            f"Requirement Description: {match[0]['Example']['Description']}\n"
-            f"Answer: {','.join([ans for ans in match[0]['Example']['Correct answer'] if ans])}\n"
+            f"Requirement Description: {entry['Example']['Description']}\n"
+            f"Answer: {','.join([ans for ans in entry['Example']['Correct answer'] if ans])}\n"
         )
     
     return "\n".join(example_texts)
 
-def get_example_from_sampled_data_bm25_knn_rerank(sampled_data, sampled_embeddings, requirement_text, top_k_bm25=20, top_k_knn=20, top_k_final=3):
-
+def get_example_from_sampled_data_bm25_knn_rerank(sampled_data, faiss_index, requirement_text, top_k_bm25=20, top_k_knn=20, top_k_final=3):
+    # BM25 检索
     corpus = [entry["Example"]["Description"] for entry in sampled_data]
     tokenized_corpus = [tokenize_chinese_english(doc).split() for doc in corpus]
     bm25 = BM25Okapi(tokenized_corpus)
@@ -191,10 +171,12 @@ def get_example_from_sampled_data_bm25_knn_rerank(sampled_data, sampled_embeddin
     bm25_scores = bm25.get_scores(query)
     bm25_top_indices = np.argsort(bm25_scores)[::-1][:top_k_bm25]
 
-    query_vec = get_embedding_bge(requirement_text).reshape(1, -1)
-    sims = cosine_similarity(sampled_embeddings, query_vec).squeeze()
-    knn_top_indices = np.argsort(sims)[::-1][:top_k_knn]
+    # Faiss向量检索
+    query_vec = get_embedding_bge(requirement_text).astype('float32').reshape(1, -1)
+    _, knn_top_indices = faiss_index.search(query_vec, top_k_knn)
+    knn_top_indices = knn_top_indices[0]  # 展平结果
 
+    # 合并两种检索结果
     merged_indices = list(set(bm25_top_indices).union(set(knn_top_indices)))
 
     # ===== BGE-Reranker rerank =====
@@ -205,7 +187,7 @@ def get_example_from_sampled_data_bm25_knn_rerank(sampled_data, sampled_embeddin
 
     reranked = sorted(zip(merged_indices, scores), key=lambda x: x[1], reverse=True)[:top_k_final]
 
-    # ===== Step 5: 构造最终结果 =====
+    # ===== 构造最终结果 =====
     example_texts = []
     for idx, score in reranked:
         entry = sampled_data[idx]["Example"]
@@ -214,7 +196,6 @@ def get_example_from_sampled_data_bm25_knn_rerank(sampled_data, sampled_embeddin
         example_texts.append(
             f"Requirement Description: {desc}\n"
             f"Answer: {', '.join([ans for ans in answers if ans])}\n"
-            # f"Score: {score:.4f}\n"  # 如有需要也可加入
         )
 
     return "\n".join(example_texts)
@@ -241,11 +222,11 @@ def extract_json(response_content):
     return None
 
 LLM_MODEL = "qwq-32b"
+
 def call_model_api(messages: List[Dict[str, str]]):
     client = OpenAI(
         api_key="", ## qwen
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
-
     )
     if LLM_MODEL != "qwq-32b":
         response = client.chat.completions.create(
@@ -292,7 +273,6 @@ def call_model_api(messages: List[Dict[str, str]]):
         return content
 
 def parse_multiple_answers(generated_text: str, child_node: List[str]) -> List[Tuple[str, float]]:
-
     text_lower = generated_text.lower()
     if "none" in text_lower:
         return []
@@ -357,11 +337,9 @@ def one_shot_classify(
     requirement: str,
     merged_tree_file: str,
     sampled_data: List[Dict],
-    sampled_embeddings: List,
+    faiss_index,
     top_k: int = 3
 ) -> Tuple[List[Tuple[str, float]], str, str]:
-
-
     all_leaf_paths = get_all_paths(merged_tree_file, "root")
     all_leaf_paths = [p.replace("root-", "") for p in all_leaf_paths]
 
@@ -369,7 +347,8 @@ def one_shot_classify(
     for idx, path in enumerate(all_leaf_paths):
         letter = chr(65 + idx)
         child_node_str += f"{letter}. {path}\n"
-    example_text = get_example_from_sampled_data_bm25_knn_rerank(sampled_data, sampled_embeddings, requirement)
+        
+    example_text = get_example_from_sampled_data_bm25_knn_rerank(sampled_data, faiss_index, requirement)
 
     user_prompt = (
                     f"Please follow the steps and choose correct answers from the following {len(child_node_str)} options as the requirements class according to requirement description.\n"
@@ -396,12 +375,10 @@ def one_shot_classify(
 
     return chosen_list, user_prompt, model_answer
 
-
-
 def batch_generate_answer_api(
     sentences: List[str],
     sampled_data: List[Dict],
-    sampled_embeddings: List,
+    faiss_index,
     merged_tree: str,
     batch_answer: List[List[str]],
     max_depth: int = 5
@@ -419,7 +396,7 @@ def batch_generate_answer_api(
             requirement=s,
             merged_tree_file=merged_tree,
             sampled_data=sampled_data,
-            sampled_embeddings=sampled_embeddings,
+            faiss_index=faiss_index,
             top_k=3
         )
 
@@ -466,7 +443,7 @@ def count_processed_examples(answer_json_path):
 
 def load_memory_and_embedding(memory_path, embedding_path):
     memory_finally = []
-    embedding_finally = []
+    embedding_finally = None
 
     try:
         with open(memory_path, 'r', encoding='utf-8') as f:
@@ -477,9 +454,10 @@ def load_memory_and_embedding(memory_path, embedding_path):
         pass  
 
     try:
-        embedding_finally = np.load(embedding_path).tolist()
+        embedding_finally = np.load(embedding_path)
     except FileNotFoundError:
         pass  
+    
     return memory_finally, embedding_finally
 
 def load_unprocessed_requirements(excel_path, processed_count):
@@ -510,9 +488,9 @@ def json_to_dataframe(json_file, processed_count=0):
     return df
 
 if __name__ == '__main__':
-    answer_json_path = 'Results/ToT0315/answer_shot_'+str(LLM_MODEL)+'.json'
-    memory_json_path = 'Results/ToT0315/memory_shot_'+str(LLM_MODEL)+'.json'
-    embedding_path = 'Results/ToT0315/embedding_shot_'+str(LLM_MODEL)+'.npy'
+    answer_json_path = 'Results/'+str(LLM_MODEL)+'.json'
+    memory_json_path = 'Results/'+str(LLM_MODEL)+'.json'
+    embedding_path = 'Results/'+str(LLM_MODEL)+'.npy'
 
     json_path = 'selected_samples.json'
     merged_tree = 'final_structure_tree.json'
@@ -523,12 +501,26 @@ if __name__ == '__main__':
 
     processed_count = count_processed_examples(answer_json_path)
 
-    memory_finally, embedding_finally = load_memory_and_embedding(memory_json_path, embedding_path)
+    # 加载数据和创建Faiss索引
+    memory_finally, embedding_finally_np = load_memory_and_embedding(memory_json_path, embedding_path)
+    
+    # 创建memory_finally的Faiss索引
+    memory_faiss_index = None
+    if embedding_finally_np is not None and len(embedding_finally_np) > 0:
+        embedding_finally_np = embedding_finally_np.astype('float32')
+        dimension = embedding_finally_np.shape[1]
+        memory_faiss_index = faiss.IndexFlatIP(dimension)  # 使用内积(IP)作为相似度度量
+        memory_faiss_index.add(embedding_finally_np)
+    
+    # 加载sampled_data和创建其Faiss索引
     with open(sampled_data_path, 'r', encoding='utf-8') as f:
         sampled_data = json.load(f)
-    sampled_embeddings = np.load(sampled_embeddings_path)
+    sampled_embeddings = np.load(sampled_embeddings_path).astype('float32')
     
-
+    dimension = sampled_embeddings.shape[1]
+    sampled_faiss_index = faiss.IndexFlatIP(dimension)  # 使用内积(IP)作为相似度度量
+    sampled_faiss_index.add(sampled_embeddings)
+    
     unprocessed_data = json_to_dataframe(json_path, processed_count)
     
     for batch_start in tqdm(range(0, len(unprocessed_data), eval_batch_size), desc="Generating outputs"):
@@ -538,7 +530,7 @@ if __name__ == '__main__':
         responses, memory_total, chat_history = batch_generate_answer_api(
             batch,
             sampled_data,
-            sampled_embeddings,
+            sampled_faiss_index,
             merged_tree,
             batch_answer,
             max_depth=5
@@ -570,12 +562,25 @@ if __name__ == '__main__':
             }
             results.append(data_answer)
 
-            memory_finally.append(memory)
             current_memory.append(memory)
 
-            emb = get_embedding_bge(example)
-            embedding_finally.append(emb)
+            emb = get_embedding_bge(example).astype('float32')
             current_embedding.append(emb)
+            
+            # 更新embedding_finally_np和Faiss索引
+            if memory_faiss_index is None:
+                # 第一次创建索引
+                dimension = len(emb)
+                memory_faiss_index = faiss.IndexFlatIP(dimension)
+                memory_faiss_index.add(emb.reshape(1, -1))
+                embedding_finally_np = emb.reshape(1, -1)
+            else:
+                # 添加到现有索引
+                memory_faiss_index.add(emb.reshape(1, -1))
+                if embedding_finally_np is None:
+                    embedding_finally_np = emb.reshape(1, -1)
+                else:
+                    embedding_finally_np = np.vstack([embedding_finally_np, emb.reshape(1, -1)])
 
         with open(answer_json_path, 'a', encoding='utf-8') as f:
             for entry in results:
@@ -594,4 +599,4 @@ if __name__ == '__main__':
                 json.dump(data, f, ensure_ascii=False)
                 f.write('\n')
 
-        np.save(embedding_path, np.array(embedding_finally))
+        np.save(embedding_path, embedding_finally_np)
