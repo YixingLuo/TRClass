@@ -4,11 +4,12 @@ import re
 from collections import Counter
 import matplotlib.pyplot as plt
 
+
 def get_labels_from_row(row):
     labels = []
-    for i in range(1, 3):  
+    for i in range(1, 3):  # 支持两条路径
         level_path = []
-        for j in range(1, 5):  
+        for j in range(1, 5):  # 每条路径最多4级
             level = row[f'Level{j}_{i}']
             if pd.notna(level):
                 level_path.append(level)
@@ -18,9 +19,9 @@ def get_labels_from_row(row):
  
 def get_labels_from_row_single(row):
     labels = []
-    for i in range(1, 2):  
+    for i in range(1, 2):  # 支持两条路径
         level_path = []
-        for j in range(1, 5):
+        for j in range(1, 5):  # 每条路径最多4级
             level = row[f'Level{j}_{i}']
             if pd.notna(level):
                 level_path.append(level)
@@ -31,23 +32,45 @@ def get_labels_from_row_single(row):
 import json
 
 def load_predictions_from_answer_jsonl(file_path):
-    
+    """
+    从多行JSON（JSONL）格式的answer.jsonl文件中读取预测标签，并转换为评估函数所需的格式。
+
+    返回格式:
+    [
+        [{"标签1": 1.0}],
+        [{"标签2": 1.0}],
+        ...
+    ]
+    """
     predictions = []
     
     with open(file_path, 'r', encoding='utf-8') as f:
         for line in f:
             data = json.loads(line.strip())
             conversations = data.get("conversations", [])
+            
+            # 遍历找到最后一个from=gpt的条目（确保一定是最终答案，不是历史）
             last_gpt_label = None
             for convo in conversations:
                 if convo['from'] == 'gpt':
                     last_gpt_label = convo['value']
             
             if last_gpt_label:
+                # 转换成评估需要的格式（每个样本是一个list，list里是{标签:1.0}）
                 predictions.append([{last_gpt_label: 1.0}])
 
     return predictions
 def load_predictions_from_answer_jsonl_v2(file_path):
+    """
+    从answer.jsonl格式的预测文件读取多标签+置信度信息，并转换为评估函数所需格式。
+
+    返回格式:
+    [
+        [{"标签1": 置信度}, {"标签2": 置信度}, ...],
+        [{"标签A": 置信度}, {"标签B": 置信度}, ...],
+        ...
+    ]
+    """
     predictions = []
     confidence_pattern = re.compile(r'(.+?)\s*\(conf=([\d\.]+)\)')
 
@@ -60,6 +83,8 @@ def load_predictions_from_answer_jsonl_v2(file_path):
             for convo in conversations:
                 if convo['from'] == 'gpt':
                     last_gpt_value = convo['value']
+            
+            # 如果gpt的value是列表（多标签+置信度），解析它
             if isinstance(last_gpt_value, list):
                 label_conf_list = []
                 for label_with_conf in last_gpt_value:
@@ -70,12 +95,47 @@ def load_predictions_from_answer_jsonl_v2(file_path):
                         label_conf_list.append({label: confidence})
                 predictions.append(label_conf_list)
             elif isinstance(last_gpt_value, str):
+                # 兼容value是字符串（可能的另一种情况），直接处理成单标签预测
                 predictions.append([{last_gpt_value: 1.0}])
 
     return predictions
 
+def load_predictions_from_memory_jsonl(file_path):
+    """
+    从 memory.jsonl 格式文件读取多标签+置信度信息，返回评估函数需要的格式。
+    [
+        [{"标签1": 置信度}, {"标签2": 置信度}, ...],
+        [{"标签A": 置信度}, ...],
+        ...
+    ]
+    """
+    predictions = []
+    confidence_pattern = re.compile(r'(.+?)\s*\(conf=([\d\.]+)\)')
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            data = json.loads(line.strip())
+            example = data.get("Example", {})
+            llm_inference = example.get("Llm inference", [])
+            if isinstance(llm_inference, list):
+                label_conf_list = []
+                for label_with_conf in llm_inference:
+                    match = confidence_pattern.match(label_with_conf)
+                    if match:
+                        label = match.group(1).strip()
+                        confidence = float(match.group(2))
+                        label_conf_list.append({label: confidence})
+                predictions.append(label_conf_list)
+            elif isinstance(llm_inference, str):
+                # 兼容极端情况下只有单标签字符串
+                predictions.append([{llm_inference: 1.0}])
+
+    return predictions
+
+
 def compute_metrics(predictions, ground_truth_file, k=3):
     if ground_truth_file.endswith('.json'):
+        # 从 JSON 文件读取
         with open(ground_truth_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
@@ -84,7 +144,7 @@ def compute_metrics(predictions, ground_truth_file, k=3):
             example = item.get('Example', {})
             description = example.get('Description', '').strip()
             labels = example.get('Correct answer', [])
-            labels = [label for label in labels if label]  
+            labels = [label for label in labels if label]  # 去除空标签
 
             records.append({
                 'Requirements Description': description,
@@ -94,6 +154,7 @@ def compute_metrics(predictions, ground_truth_file, k=3):
         ground_truth = pd.DataFrame(records)
 
     elif ground_truth_file.endswith('.xlsx'):
+        # 从 Excel 读取
         ground_truth = pd.read_excel(ground_truth_file)
         ground_truth['Labels'] = ground_truth.apply(get_labels_from_row, axis=1)
 
@@ -102,21 +163,26 @@ def compute_metrics(predictions, ground_truth_file, k=3):
     sample_metrics = []
     example_f1_list = []
 
-    label_stats = {}  
+    # === 新增：用于统计 label 级别（Macro / Weighted）的 TP、FP、FN
+    label_stats = {}  # {label_str: {'tp':0, 'fp':0, 'fn':0}}
 
     def ensure_label_dict(label):
+        """若 label 不在字典中，则初始化其统计项。"""
         if label not in label_stats:
             label_stats[label] = {'tp': 0, 'fp': 0, 'fn': 0}
         return label_stats[label]
 
     for idx in range(num_samples):
         pred_list = predictions[idx]
+
+        # 将当前样本的预测标签+置信度整理为字典
         pred_scores = {}
         for p in pred_list:
             for label, score in p.items():
                 cleaned_label = label.replace('root-', '')
                 pred_scores[cleaned_label] = score
 
+        # 取置信度从高到低的 top-k 标签
         sorted_preds = sorted(pred_scores.items(), key=lambda x: x[1], reverse=True)
         top_k_preds = [x[0] for x in sorted_preds[:k]]
 
@@ -124,21 +190,28 @@ def compute_metrics(predictions, ground_truth_file, k=3):
         true_labels = ground_truth.iloc[idx]['Labels']
         true_label_count = len(true_labels)
 
+        # === (1) 统计 sample-level 指标 ===
+        # 1) Precision@1 (论文版)：
         overlap_top1 = len(set(top_k_preds[:1]) & set(true_labels))
         precision_at_1 = overlap_top1 / min(1, true_label_count) if true_label_count > 0 else 0
 
+        # 2) Precision@3 (论文版)：
         overlap_top3 = len(set(top_k_preds) & set(true_labels))
         precision_at_3 = overlap_top3 / min(3, true_label_count) if true_label_count > 0 else 0
 
+        # 3) Recall:
         recall = overlap_top3 / true_label_count if true_label_count > 0 else 0
 
+        # 4) Precision:
         precision = overlap_top3 / prediction_count if prediction_count > 0 else 0
 
+        # 5) F1-score:
         if precision + recall > 0:
             f1 = 2 * precision * recall / (precision + recall)
         else:
             f1 = 0
 
+        # 6) Example-F1 (Dice)
         pred_set = set(top_k_preds)
         true_set = set(true_labels)
         intersection = len(pred_set & true_set)
@@ -146,6 +219,7 @@ def compute_metrics(predictions, ground_truth_file, k=3):
         example_f1 = 2 * intersection / union if union > 0 else 0
         example_f1_list.append(example_f1)
 
+        # 7) MRR
         reciprocal_ranks = []
         for t_label in true_labels:
             if t_label in top_k_preds:
@@ -166,19 +240,25 @@ def compute_metrics(predictions, ground_truth_file, k=3):
             "MRR": sample_mrr
         })
 
+        # === (2) 更新 label-level 统计信息 (TP/FP/FN) 用于后面算 Macro / Weighted ===
+        # 该样本的预测集合和真实集合
         for label in pred_set:
+            # 如果该标签在真实标签集中，则 +1 TP，否则 +1 FP
             if label in true_set:
                 ensure_label_dict(label)['tp'] += 1
             else:
                 ensure_label_dict(label)['fp'] += 1
 
         for label in true_set:
+            # 若真实标签不在预测集合，则该标签 FN +1
             if label not in pred_set:
                 ensure_label_dict(label)['fn'] += 1
 
+    # 将 sample-level 指标整合成 DataFrame
     df_metrics = pd.DataFrame(sample_metrics)
     print(df_metrics)
 
+    # ========== 先输出原先的 sample-level 平均 ==========
     print("\nOverall Metrics (Sample-level Average across samples):")
     print(f"Precision@1 (sample avg): {df_metrics['precision@1'].mean():.4f}")
     print(f"Precision@3 (sample avg): {df_metrics['precision@3'].mean():.4f}")
@@ -188,11 +268,12 @@ def compute_metrics(predictions, ground_truth_file, k=3):
     print(f"Example-F1 (sample avg):   {sum(example_f1_list) / len(example_f1_list):.4f}")
     print(f"MRR (sample avg):          {df_metrics['MRR'].mean():.4f}")
 
+    # ========== 下面计算 Macro / Weighted 平均(按标签统计) ==========
     all_labels = list(label_stats.keys())
     label_precision = {}
     label_recall = {}
     label_f1 = {}
-    label_support = {}  
+    label_support = {}  # 该标签真实出现了多少次（TP+FN）
 
     for label in all_labels:
         tp = label_stats[label]['tp']
@@ -206,13 +287,15 @@ def compute_metrics(predictions, ground_truth_file, k=3):
         label_precision[label] = p
         label_recall[label] = r
         label_f1[label] = f
-        label_support[label] = (tp + fn)  
+        label_support[label] = (tp + fn)  # 真实里有多少次出现
 
+    # 1) Macro平均：所有标签的指标均值
     n_labels = len(all_labels)
     macro_p = sum(label_precision.values()) / n_labels if n_labels > 0 else 0
     macro_r = sum(label_recall.values()) / n_labels if n_labels > 0 else 0
     macro_f = sum(label_f1.values()) / n_labels if n_labels > 0 else 0
 
+    # 2) Weighted平均：按标签支持度加权
     total_support = sum(label_support.values())
     if total_support > 0:
         weighted_p = sum(label_precision[l] * label_support[l] for l in all_labels) / total_support
@@ -230,6 +313,9 @@ def compute_metrics(predictions, ground_truth_file, k=3):
     print(f"Weighted F1:         {weighted_f:.4f}")
 
 
+    # ========== 再做分段 (by sample size) 的可视化 ==========
+
+    # 定义需要计算的样本数量区间
     n_values = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900,
                 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800]
 
@@ -258,10 +344,12 @@ def compute_metrics(predictions, ground_truth_file, k=3):
         metrics_results['f1'].append(subset['f1'].mean() if len(subset) > 0 else 0)
 
         if end <= len(example_f1_list):
+            # 能索引到 example_f1_list[:end]
             metrics_results['example_f1'].append(
                 sum(example_f1_list[start:end]) / (end - start) if (end - start) > 0 else 0
             )
         else:
+            # 超过 example_f1_list 长度，则只对真实存在部分取平均
             real_end = min(end, len(example_f1_list))
             real_count = real_end - start
             if real_count > 0:
@@ -284,6 +372,7 @@ def compute_metrics(predictions, ground_truth_file, k=3):
         print(f"Example-F1:  {metrics_results['example_f1'][i]:.4f}")
         print(f"MRR:         {metrics_results['mrr'][i]:.4f}")
 
+    # 绘制趋势图
     plt.figure(figsize=(12, 6))
     plt.plot(metrics_results['n'], metrics_results['precision@1'], marker='o', label='Precision@1')
     plt.plot(metrics_results['n'], metrics_results['precision@3'], marker='s', label='Precision@3')
@@ -314,7 +403,24 @@ def print_prediction_stats(predictions):
     for label, count in label_counter.most_common():
         print(f"{label}: {count}")
 
+# def split_path(path_str: str) -> list:
+#     """
+#     将类似 "root-功能需求-数据需求" 拆成 [level1, level2, level3, level4]。
+#     若不足4级，则用 "" 填充。
+#     """
+#     parts = path_str.split('-')
+#     # 如果第一个是 'root'，则去掉
+#     if parts and parts[0].lower() == 'root':
+#         parts = parts[1:]
+#     # 补齐或截断至4级
+#     parts = parts + [""] * (4 - len(parts))
+#     return parts[:4]
+
 def split_path(path_str):
+    """
+    假设 path_str 为 '功能需求-数据需求-子功能-子子功能' 这样用'-'分隔的层级。
+    根据具体情况进行拆分，并返回 (level1, level2, level3, level4)，不足的层级返回空字符串。
+    """
     parts = path_str.split('-')
     while len(parts) < 4:
         parts.append('')
@@ -323,9 +429,9 @@ def split_path(path_str):
 
 def get_labels_from_row(row):
     labels = []
-    for i in range(1, 3): 
+    for i in range(1, 3):  # 支持两条路径
         level_path = []
-        for j in range(1, 5): 
+        for j in range(1, 5):  # 每条路径最多4级
             level = row[f'Level{j}_{i}']
             if pd.notna(level):
                 level_path.append(level)
@@ -344,16 +450,9 @@ def split_path(path_str):
         parts.append('')
     return parts[0], parts[1], parts[2], parts[3]
 
-def get_labels_from_row(row):
-    if isinstance(row['Labels'], str):
-        labels = [lab.strip() for lab in row['Labels'].split('\n') if lab.strip()]
-    elif isinstance(row['Labels'], list):
-        labels = row['Labels']
-    else:
-        labels = []
-    return labels
 
 def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
+
     if ground_truth_file.endswith('.json'):
         with open(ground_truth_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -372,6 +471,7 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
         df = pd.read_excel(ground_truth_file)
         df['Labels'] = df.apply(get_labels_from_row, axis=1)
 
+
     p1_level   = {1: [], 2: [], 3: [], 4: []}  # Precision@1
     p3_level   = {1: [], 2: [], 3: [], 4: []}  # Precision@3
     mrr_level  = {1: [], 2: [], 3: [], 4: []}  # MRR
@@ -381,15 +481,18 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
     r_level    = {1: [], 2: [], 3: [], 4: []}  # Sample-level Recall
     f1sample_level = {1: [], 2: [], 3: [], 4: []}  # Sample-level F1
 
+
     macro_tp = {1: defaultdict(int), 2: defaultdict(int), 3: defaultdict(int), 4: defaultdict(int)}
     macro_pred = {1: defaultdict(int), 2: defaultdict(int), 3: defaultdict(int), 4: defaultdict(int)}
     macro_all_gt = {1: set(), 2: set(), 3: set(), 4: set()}
+
     macro_gt_count = {1: defaultdict(int), 2: defaultdict(int), 3: defaultdict(int), 4: defaultdict(int)}
 
     num_samples = min(len(predictions), len(df))
 
     for idx in range(num_samples):
-        true_paths = df.iloc[idx]['Labels']  
+
+        true_paths = df.iloc[idx]['Labels'] 
         ground_levels = {1: set(), 2: set(), 3: set(), 4: set()}
         for path_str in true_paths:
             l1, l2, l3, l4 = split_path(path_str)
@@ -398,7 +501,8 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
             if l3: ground_levels[3].add(l3)
             if l4: ground_levels[4].add(l4)
         
-        pred_list = predictions[idx]  # [{p1: conf1}, {p2: conf2}, ...]
+
+        pred_list = predictions[idx]  
         pred_scores = {}
         for p in pred_list:
             for label, score in p.items():
@@ -407,6 +511,7 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
         sorted_preds = sorted(pred_scores.items(), key=lambda x: x[1], reverse=True)
         top_k_paths = [item[0] for item in sorted_preds[:k]]
         
+
         top1_levels = {1: set(), 2: set(), 3: set(), 4: set()}
         if len(top_k_paths) > 0:
             l1, l2, l3, l4 = split_path(top_k_paths[0])
@@ -423,6 +528,7 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
             if l3: top3_levels[3].add(l3)
             if l4: top3_levels[4].add(l4)
         
+
         for level_i in range(1, 5):
             # Precision@1
             if top1_levels[level_i].intersection(ground_levels[level_i]):
@@ -465,7 +571,7 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
                 dice = 0.0
             f1_level[level_i].append(dice)
             
-            # Sample-level Precision, Recall, F1 
+
             pred_set = top3_levels[level_i]
             true_set = ground_levels[level_i]
             inter_size = len(pred_set & true_set)
@@ -476,14 +582,17 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
             r_level[level_i].append(r_val)
             f1sample_level[level_i].append(f1_val)
 
+
             for label in top3_levels[level_i]:
                 macro_pred[level_i][label] += 1
                 if label in ground_levels[level_i]:
                     macro_tp[level_i][label] += 1
             
+
             for label in ground_levels[level_i]:
                 macro_all_gt[level_i].add(label)
                 macro_gt_count[level_i][label] += 1
+
 
     print("\n=== Level-wise Metrics (over {} samples) ===".format(num_samples))
     for level_i in range(1, 5):
@@ -499,6 +608,7 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
               f"Precision@1={p1_avg:.4f}, Precision@3={p3_avg:.4f}, MRR={mrr_avg:.4f}, "
               f"Example-F1(Dice)={dice_avg:.4f}, Sample-P={p_avg:.4f}, Sample-R={r_avg:.4f}, Sample-F1={f1_avg:.4f}")
 
+
     print("\n=== Macro-Precision per Level ===")
     for level_i in range(1, 5):
         all_labels = set(macro_pred[level_i].keys()).union(macro_all_gt[level_i])
@@ -511,6 +621,7 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
             macro_precisions.append(precision)
         macro_precision_avg = sum(macro_precisions) / len(all_labels) if all_labels else 0.0
         print(f"[Level {level_i}] Macro-Precision={macro_precision_avg:.4f}")
+
 
     print("\n=== Weighted Macro-Precision per Level ===")
     for level_i in range(1, 5):
@@ -529,6 +640,7 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
             weighted_macro_precision = weighted_sum / total_count
         print(f"[Level {level_i}] Weighted Macro-Precision={weighted_macro_precision:.4f}")
 
+
     print("\n=== Weighted Metrics per Level (based on GT frequency) ===")
     for level_i in range(1, 5):
         all_labels = macro_all_gt[level_i]
@@ -545,6 +657,7 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
                 tp = macro_tp[level_i][lab]
                 pred_count = macro_pred[level_i][lab]
                 gt_count = macro_gt_count[level_i][lab]
+
                 prec = tp / pred_count if pred_count > 0 else 0.0
                 rec = tp / gt_count if gt_count > 0 else 0.0
                 f1score = (2 * prec * rec / (prec + rec)) if (prec + rec) > 0 else 0.0
@@ -566,13 +679,13 @@ def compute_metrics_by_level_2(predictions, ground_truth_file, k=3):
 if __name__ == '__main__':
 
 
-    predictions = load_predictions_from_answer_jsonl_v2('answer_multi_total_gpt-3.5-turbo.json') ##baseline
+    predictions = load_predictions_from_memory_jsonl('D:/LLM-code/TRClass/Results/memory_taxonomyshot_qwq-32b.json') ##taxonomy_shot
     print_prediction_stats(predictions)
 
-    compute_metrics(predictions, 'selected_samples.json', k=3)
+    compute_metrics(predictions, 'D:/LLM-code/TRClass/Dataset/EHR/EHR_540_selected_samples.json', k=3)
     compute_metrics_by_level_2(
         predictions,
-        ground_truth_file='selected_samples.json',
+        ground_truth_file='D:/LLM-code/TRClass/Dataset/EHR/EHR_540_selected_samples.json',
         k=3
     )
 

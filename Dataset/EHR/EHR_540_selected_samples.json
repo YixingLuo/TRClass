@@ -1,0 +1,4500 @@
+[
+    {
+        "Example": {
+            "Description": "upon receipt of a patient summary record formatted according to the alternative standard display it in human readable format",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "maintain active medication allergy list",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to integrate preferences with appropriate teaching materials",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to associate documentation with problems possibly and possibly diagnoses",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to send a query to verify prescription drug insurance eligibility and apply response to formulary and benefit files to determine coverage",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability for an escalation process for critical results if not acknowledged in a specified time frame",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the comment is empty and the text no comment without link is displayed instead of the read comment link",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should allow a manual correction to a count of an item in inventory by increasing or decreasing the items on hand quantity",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to support disaster or mass casualties and disaster triage",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "an individual has the right to have a covered entity amend protected health information or a record about the individual in a designated record set for as long as the protected health information is maintained in the designated record set",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to address chart lock functionality for medication orderings",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the user inputs the mid of a patient who is deceased and is prompted to try again",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the list of cases must differentiate the type possibly and possibly status of the case by color coding the line item in the list",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide entry of iv or lvp orders including chemotherapeutic agents",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the downloaded claim file should contain the necessary encounter information formatted for billing",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall store location identification of paper documents attributes shall minimally include folder box and physical location",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to inform the clinician of recommended or required immunizations based on patient risk factors and other criteria as identified in widely accepted immunization schedules and recommendations",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "enable a user to electronically record change and access a patients active medication allergy list as well as medication allergy history",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "select the referring physician risk level etc from the dropdown lists provided and enter a reason for the referral",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should have the ability to interact with clinical problem list when the problem list is codified",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "more than 80 percent of all unique patients seen by the ep have at least one entry or an indication that the patient is not currently prescribed any medication recorded as structured data",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "e a statement that other uses and disclosures will be made only with the individuals written authorization and that the individual may revoke such authorization as provided by 164508b5",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "for any systematic nonuser initiated action that occurs on a case such as the disputes aging process a case activity will be generated",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "invoice adjustments may also be made here",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "v a restriction agreed to by a covered entity under paragraph a of this section is not effective under this subpart to prevent uses or disclosures permitted or required under 164502a2ii 164510a or 164512",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to send transportation requests",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to provide a detailed outcome reporting to analyze and determine best practice",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to have prenotification occurrence prior to order stop time",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": " 2  electronically identify for a user diagnostic and therapeutic reference information in accordance with the standard specified at  170204b and the implementation specifications at  170204 b1 or 2",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to store cellular images attached to the case and viewable to clinicians",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii a health plan may condition enrollment in the health plan or eligibility for benefits on provision of an authorization requested by the health plan prior to an individuals enrollment in the health plan if",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "speech recognition",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to create review and edit information regarding a change on the status of a problem to include but not be limited to the date the change was first noticed or diagnosed",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability for a user to associate laboratory orders with a charge code",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to create prescriptions in which the weightspecific dose is suggested",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "selecting click here to search next to the drug field will bring up a new field into which a search term may be entered",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to create referral orders with detail adequate for correct routing",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the itrust user admin has been authenticated in the itrust medical records system uc3",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system generates work lists queues including medicare secondary payer msp followup preregistration dirty beds discharge followup er quick registration followup insurance verification past due arrival pending arrival leave of absence view unauthenticated employer miscellaneous insurance interpreter required privacy practice accommodation mismatch nurse unit inquiry name inquiry",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to indicate order still pending or not completed when transfer or moved or not completed in specific time frame eg antibiotic ordered pending pharmacy delivery and patient moves from ed to icu before delivered",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to provide visual user alerts in the form of poups color codes etc at the point of data entry and when displaying information on the screen",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to capture a report of no known drug allergies nkda for the patient",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to monitor adverse drug reaction",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "subject to paragraph c of this section the eligible hospital or cah performs medication reconciliation for more than 50 percent of transitions of care in which the patient is admitted to the eligible hospitals or cahs inpatient or emergency department pos 21 or 23",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to provide patients a copy of their protected health information in a covered entitys designated record set",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should permit the partial dispensing of medication for an order and will prompt the pharmacy at the appropriate time of the need to send more medication to complete the order",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "product formula ingredients shall allow defining substitutionary ingredients",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability for the icu component to integrate and present fluid balance",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the itrust user patient or hcp has been authenticated in the itrust medical records system uc3",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to identify an appropriate drug dosage range specific for each known patient condition and parameter at the time of medication ordering",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to capture nonmedication patient care orders for an action or item",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to support the automatic collection of data elements defined by the associated clinical practice guideline or order",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "if access is denied on a ground permitted under paragraph a3 of this section the individual has the right to have the denial reviewed by a licensed health care professional who is designated by the covered entity to act as a reviewing official and who did not participate in the original decision to deny",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to report demographic data",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "d calculate and display body mass index bmi",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": " emergency contact name and phone number",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "provide a high level overview of key information notification source for important interval data and a launch pad to vital and related applications",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should capture other clinical measures such as peak expiratory flow rate size of lesions oxygen saturation height weight and body mass index as discrete elements of structured or unstructured data",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should display the timing route of administration and dose of all medications on the list",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has capability to capture track and print referral information including the process to accept a referral and to notify the referring source of the acceptance",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should send an electronic prescription to pharmacy",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should perform drug dosage functions using any component of a combination drug eg acetaminophenhydrocodone",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a covered entity that agrees to a restriction must document the restriction in accordance with 164530j",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to print labels in other languages besides english",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should compute drug doses based on appropriate dosage ranges using the patients body weight",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to indicate the name and relationship of the party completing the advance directive for the patient",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to create assessments",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "at least 10 percent of all unique patients seen by the ep are provided timely available to the patient within four business days of being updated in the certified ehr technology electronic access to their health information subject to the eps discretion to withhold certain information",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should present aggregate data in an electronic format for use by other analytical programs",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a chronic specialdiagnosishistory patient is an alive patient who has been diagnosed with at least one of the following  diabetes mellitus is diagnosed with icd code beginning with 250",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to include workflow tasks as part of communication to the provider",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to send an electronic prescription to pharmacy",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall display a default placeholder image for patients who do not have a photograph on file",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should present information necessary to correctly identify the patient and accurately administer blood products including patient name blood product number amount route product expiration date and time of administration",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "i the size complexity and capabilities of the covered entity",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii a covered entity is not in compliance with the standards in 164502e and paragraph a of this section if the covered entity knew of a pattern of an activity or practice of the business associate that constituted a material breach or violation of the business associates obligation under the contract or other arrangement unless the covered entity took reasonable steps to cure the breach or end the violation as applicable and if such steps were unsuccessful",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the adverse event report changes to a status of removed",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to automatically alert the provider if contraindications to the ordered dosage range are identified",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to compare health data and patient contextdriven assessments to practice standards in order to prompt additional testing possible diagnoses or adjunctive treatment",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "3 the covered entities included in the joint notice must provide the notice to individuals in accordance with the applicable implementation specifications of paragraph c of this section",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should retrieve unstructured health record information as part of the patient emr",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a the covered entity within the time limit set by paragraph c1 of this section provides the individual with a written statement of the reasons for the delay and the date by which the covered entity will provide the accounting and",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should track wholesaler performance",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the itrust user lchp has been authenticated in the itrust medical records system uc3",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution provides online generation of dose userdefined labels",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "d report to the group health plan any use or disclosure of the information that is inconsistent with the uses or disclosures provided for of which it becomes aware",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the patient is also provided with the option to send a message to the receiving hcp to request that an appointment be scheduled",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to be configured to meet the needs of various disciplines in the ed such as physician nurse etc ",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to exclude a medication from the current medication list eg marked inactive erroneous completed discontinued and document reason for such action",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ehr technology must be able to electronically create cancer case information for electronic transmission in accordance with",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "these images may be stored within the system or be provided through direct linkage to external sources",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "for each meaningful use objective with a percentagebased measure that is supported by a capability included in an ehr technology electronically record the numerator and denominator and create a report including the numerator denominator and resulting percentage associated with each applicable meaningful use measure",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "provide patients with timely electronic access to their health information including lab results problem list medication lists and allergies within 4 business days of the information being available to the ep",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to capture other dates associated with medications such as start and end dates",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should generate and print a list of inmates in house or paroled for drug utilization by diagnosis",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to communicate using realtime messaging",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to add or modify person scenarios including",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the audit report shall include the total number of recycled parts used in the estimate",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to create order set templates for known conditions for a particular disease",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should calculate pharmacokinetic parameters for designated drugs",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "iv for the purposes of paragraph e1iib of this section a covered entity receives satisfactory assurances from a party seeking protected health information if the covered entity receives from such party a written statement and accompanying documentation demonstrating that",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should print labels for multidose controlled drugs",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "electronically download transition of care or referral summaries that were created as a result of a transition of care pursuant to the capability expressed in the certification criterion adopted at paragraph b2 of this section",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should automatically adjust dosage times when inmate transfers nursing units or facility or etc based on the cchcs defined parameters for the locations",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability and workflow to schedule multiple appointments schedule a recurring appointment add a patient while entering appointment information reschedule an appointment cancel an appointment check in an appointment check out an appointment record a no show and view the history of an appointment",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "maintain an uptodate problem list of current and active diagnoses",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "if there are no patients satisfying the three conditions an empty list is presented",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to route notifications and tasks based on solution triggers",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to produce adverseevent reporting and documentation",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has capability to send a scheduling confirmation to the requesting system",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should use workflowrelated business rules to direct the flow of work assignments",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the table side of the display shall be split into 2 regions sequential and temporal",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to capture and label patient health data derived from administrative or financial data",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should allow interdepartmental charges by par levels requesting areas and usage patterns",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to create and use site specific care plans protocols and guidelines",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has capability to provide the creation of user defined prompts alerts and fields to capture information",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to recommend required immunizations and when they are due during an encounter based on widely accepted immunization schedules",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "implement one clinical decision support rule",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should communicate orders to the service provider of the diagnostic test",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii a covered entity must document that the training as described in paragraph b2i of this section has been provided as required by paragraph j of this section",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "13 ability to save search criteria and report format through creation of saved views",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the documentation of such secure twoway online communication exchanges and provide ability to associate the communication with a specific inmates record",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide standing order functionality with fractional or multiple dose profiling",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "formula substitutionary ingredients shall be kept in persisted order",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to update and display a patientspecific medication list based on current medication orders or prescriptions",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to capture the user entry of source fixatives  of tissues submitted",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should accept the transmission of prescription data from cpoe systems",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system will notify affected parties when changes occur affecting clinicals including but not limited to clinical section capacity changes and clinical section cancellations",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the patient to whom the medication is to be administered matches the medication to be administered",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": " 2  when a patients medications medication allergies and problems are incorporated from a transition of care or referral summary received pursuant to paragraph b1iii of this section",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the list of in transit lab procedures is sorted by timestamp from oldest to most recent",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the support for safe blood administration capability should conform to dc 184 manage patient clinical measurements and capture the blood pressure temperature pulse respirations of the patient receiving the product",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to save report parameters for generating subsequent reports",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "software tester an information technology worker who tests the itrust medical records system",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": " age",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should store historical values of demographic data over time",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should track departmental or other types requisitions with printed monthly transaction statements",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should support nutritional assessment of iv or lvp orders",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability for providers and pharmacies to communicate clinical information via email or other electronic means on both general and specific orders",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "13 procurement records and files for purchases in excess of the simplified acquisition threshold must include the following at a minimum",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the  symbol for example indicates that the patient has arrived at the clinic and is ready to begin their appointment",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to reschedule suspend discontinue iv orders",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "these instructions may reside within the system or be provided through links to external sources",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the notice must contain the following statement as a header or otherwise prominently displayed this notice describes how medical information about you may be used and disclosed and how you can get access to this information",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to receive store in the patients record and display textbased outside reports",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to present order sets",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "each row in the list includes the message subject the name of the sender and timestamp",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to capture patient history as both a presence and absence of conditions ie the specification of the absence of a personal or family history of a specific diagnosis procedure or health risk behavior",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide notification of overdue preventative services in the patient record",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should generate and print a list of inmates in house or paroled for drug utilization by medical specialty of physician",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "generate lists of patients by specific conditions to use for quality improvement reduction of disparities research or outreach",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to make nursing assignments",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to reorder a prior prescription without reentering previous data eg administration schedule quantity",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall filter data by venues and key events",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall return a list of repair facilities within the radius if the preferred repair facility cannot be determined",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should pass along record destruction date information if any along with existing data when providing records to another entity",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to customize template fields to be tied to standard nomenclature",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "j calculate and submit clinical quality measures 1 calculate i electronically calculate all of the core clinical measures specified by cms for eligible professionals",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "iii authorize termination of the contract by the covered entity if the covered entity determines that the business associate has violated a material term of the contract",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "e plot and display growth charts for children 220 years including bmi",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should automatically check for max or min doses per body weight or body surface area during the order entry process",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the list is sorted based on the ascending alphabetical order of the patients last names and then first names",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "before you begin scheduling appointments youll want to configure some basic information for your users",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "enable a user to electronically submit calculated clinical quality measures in accordance with the standard and implementation specifications specified in  170205f",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to view patient charts including result flowsheets clinical notes patient information and demographics problem lists pediatric growth charts visit lists",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall have the ability to accept mass data entry from an external source",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to post a note from the web signoff",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to perform standard physiologic calculations",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "this is useful when printing so that second and later notices may be worded differently from the initial statement",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should print labels for controlled drug floor stock issues that include serial number",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide alerts for short man or tall man for all routes during the order entry process",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall display room equipment according to search parameters",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall be able to display a printable summary for individual cohorts which will include the students enlisted the program of study sequence of classes cohort progress through the program and timeline of completion",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "identify and maintain a patient record",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "if the covered entity denies the requested amendment in whole or in part the covered entity must comply with the following requirements",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to support patient data management patient care chart requests or deliver documentation completion coding or abstracting management release of information management and chart location tracking",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to update a patient history by modifying adding or removing items from the patient history as appropriate",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide interaction screening for therapeutic duplicates for all routes during the order entry process",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to integrate with hemodynamic monitors",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should automatically determine location of label printing eg satellite vs main pharmacy based on inmate classification possibly and possibly location",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide stat medication daily report",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to use previously developed care plans as a basis for the creation of new plans of care and treatment",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should use bar code readers for dispensing functions and ensures prescriptions are filled accurately by comparing the ndc on the prescription label against the product being dispensed",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to address medication administration processing",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should automatically check for maximum fluid rate during the order entry process",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide messaging capability notification for instant alert of medication errors",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should capture and label the source of clinical data provided on behalf of the patient",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide endusers the ability to search for medications by generic or brand name",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to prioritize tasks based on urgency assigned to the task",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to specify report parameters sort and filter criteria based on patient demographic and clinical data eg all male patients over 50 that are diabetic and have a hba1c value of over 70 or that are on a certain medication",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should automatically check for drugprocedure interaction for all routes during the order entry process",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "i electronically and simultaneously display ie in a single view the data from at least two list sources in a manner that allows a user to view the data and their attributes which must include at a minimum the source and last modification date",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "enable a user to electronically record modify and retrieve the smoking status of a patient",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a clinical lab section shall include the clinical site name the class instructor day and time of the lab",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "i generate lists of patients by specific conditions to use for quality improvement reduction of disparities research or outreach",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to capture use of such products in the provision of care",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the ehr system has the capability to have an anesthesia solution as an integrated part of the proposed ehr system or whether a separate solution will be required to which the ehr will interface",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to update patient problems medications medication reconciliation and allergies or adrs in the ehr which provides the ability to manage each of these listtypes",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ehr technology must be able to electronically create laboratory test reports for electronic transmission in accordance with the standard specified in  170205j and with laboratory tests expressed in accordance with at a minimum the version of the standard specified in  170207c2",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "sort by most recent first",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability for the ordering clinician to create prescription details as needed",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should automatically check for drugfluid compatibility during the order entry process",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should make common content available for prescription details to be selected by the ordering clinician",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "at this time you will need to add each plan as a separate insurance company",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "entering a specialty will allow you to narrow your search parameters when writing letters to a particular physician etc",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the secretary adopts the ein as the standard unique employer identifier provided for by 42 usc 1320d2b",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to support the use of standard utilization reports including",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system supports bed board functionality such as providing a view of beds including their status and occupancy information at either the nurse unit level or for an entire site",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "this will present you with options to generate a variety of printable and electronic claims and reports",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to bypass admitting screens to enter emergency treatment upon arrival",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "enable a user to electronically select sort retrieve and generate lists of patients according to at a minimum the data elements included in 1 problem list 2 medication list 3 demographics and 4 laboratory test results",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the functionality to define a list of resources that are valid to be scheduled to a certain appointment type",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the patient uap or personal representative enters an alpha invalid value for weight possibly and possibly pedometer reading and is notified of an error and prompted to try again",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide ability to create and maintain a report distribution mechanism with predefined reports eg monthly reports that are specific by role organization and location via portal or web",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "subject to paragraph c of this section more than 50 percent of all unique patients age 2 and over seen by the ep height weight and blood pressure are recorded as structured data",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solutions barcode checking functionality should allow the pharmacy technician or pharmacist to select another ndc with the same gsn classification from the available inventory brandswap",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "students added to a cohort shall be eligible for the cohorts program of study",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "automatically and electronically generate and indicate in realtime notifications at the point of care for drugdrug and drugallergy contraindications based on medication list medication allergy list and computerized provider order entry cpoe",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should automatically check for druglab interaction for all routes during the order entry process",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the users associated filter initially has all empty inputs for the filtering criteria before the user modifies it",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the new transaction has now been added to the list along with the referral",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "provide the ability to destroy deactivate or archive emr data or records in a solutionatic way according to the ehr solution owners policies and after legallyprescribed retention periods",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall have the ability to provide access to patientspecific test and procedure instructions that can be modified by the physician or health organization these instructions are to be given to the patient",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has capability to have rulesbased chemotherapy management component",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide checking for levels of interaction severity",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a covered entity that uses or discloses protected health information pursuant to paragraph j1 of this section is presumed to have acted in good faith with regard to a belief described in paragraph j1i or",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "when a chronic specialdiagnosishistory patient satisfies all three conditions and has multiple prescriptions satisfying the third condition the patient is listed in the list only once",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to capture and display temperature weight and height in both metric and english units the system shall be capable of indicating to the user when a vital sign measurement falls outside a preset normal range as set by authorized users",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the hcp enters a mid or name of a patient and confirms their selection ",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should maintain pharmacy formulary that includes generic drug name or trade name for combination products for each medication",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "all allergies procedures medications office visits and known relatives see uc11 and data format 65 66",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "you can also choose to make this a repeating event which allows you to set up an event only once for a given period of time",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide dual language sigs with ability to automatically print both languages based on languages entered into the solutions",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to automatically cancel active orders following discharge",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to view status information for ordered services",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the patient uap or personal representative tries to enter more than ten physiologic data points for one day and is told additional data cannot be entered",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the hcp is asked to confirm the decision to cancel the referral",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to address radiology reference data including the following modules cat scan ultrasound nuclear medicine general radiology mammography cardiology mri",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to access evidence based healthcare recommendations with documentation of sources",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should support automatic calculations of total bags or bottles to be administered per time period during the order entry process",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to provide systemwide quality reporting and physician specific performance feedback",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to track the status of tasks",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to generate 3d or 2d barcoding labels recodes forms and mars",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii electronically calculate at a minimum three clinical quality measures specified by cms for eligible professionals in addition to those clinical quality measures specified in paragraph 1i",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii uses or disclosures made to the individual as permitted under paragraph a1i of this section or as required by paragraph a2i of this section",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to support intraoperative nursing documentation including scheduled case information defaults into nursing documentation and allow for documentation by exception",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to to notify public health authorities or other external authoritative sources of a health risk within a cared for population in accordance with scope of practice organizational policy and jurisdictional law",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to view change history for a particular record or data set in accordance with users scope of practice organizational policy or jurisdictional law",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal",
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has capability to electronically provide patient reports on demand following and allow for hiding private information to comply with hipaa privacy and security requirements",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has capability to capture the users information both internal and external who created possibly and possibly edited the record",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to identify specific emr data or records for destruction review and confirm destruction before it occurs and implement auditable records function",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should print pharmacy inventory audit or cycle count worksheet listing drug data quantityonhand and last audit or verification date",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": " who or when viewed the patients emergency electronic health record other then dlhcp",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": " who or when accessed the patients information name address and date of last office visit other then dlhcp",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": " who or when marked a lab procedure as completed",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "2 national drug codes ndc as maintained and distributed by hhs for reporting the following by retail pharmacies",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to capture patient vital signs including blood pressure heart rate respiratory rate height and weight as discrete data",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "2 international classification of diseases 9th edition clinical modification volume 3 procedures including the official icd9cm guidelines for coding and reporting as maintained and distributed by hhs for the following procedures or other actions taken for diseases injuries and impairments on hospital inpatients reported by hospitals",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to update terminology standards",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "orc the override reason code",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "c use any code or data elements that are either marked not used in the standards implementation specification or are not in the standards implementation specifications",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "loinc c or o medical informatics",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to exchange healthcare data using formal standard information models and standard terminologies",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to seamlessly perform interchange operations with other solutions that adhere to recognized interchange standards",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance",
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the support for research protocols relative to individual patient care capability should conform to function in3 registry and directory services if research protocols require standardized transmission of data to or from a registry or directory",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should integrate with central fill solution to receive medication dispense information",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should integrate with the medical classification solution to track patient classification",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the clinical decision support capability should conform to function in24 extraction of health record information to support data extraction across the complete health record of an individual",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "vendor will submit a credit validation record to be applied to the enterprise billing system",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Operational",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should mark any output using standard naming conventions to identify any special dissemination handling or distribution instructions",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Operational",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "you may click edit next to any of these forms to edit its contents",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "once your users information has been updated successfully click save to return to the user or groups administration page",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the insurance distribution report listed under reports  insurance shows you how many patients seen over a given time period use each kind of insurance",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "in the calendar the date entry with a laboratory procedure ie the entry of the its last status update date shall display a label as the loinc code for the laboratory procedure",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a lab technician can record the results of a lab procedure ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the administrator will maintain a listing of allowable diagnoses that an lhcp can use",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the user selects an office visit from the calendar to read its details by clicking the read details link beside or below the icd9cm code ie diagnose displayed for the visit and then the details for the visit shall be displayed in a new page including date of office visit note text diagnoses ie icd9cm codes medical procedures performed ie cpt code  lab procedures ordered loinc code see data format 611 medications prescribed ie ndc see data format 66 immunizations given ie cpt code see uc15 s1 and the name of the doctor who prescribed the medication",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "program administrators and nursing staff members shall be able to add clinical classes or sections to a sequence of classes",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product must ensure that supervisors are allowed to access advertise empty time slots",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "look for an appropriate billing code by entering a search term in the box to the left of the search button",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "click generate x12 to create a claim file that is suitable for sending to the clearinghouse",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the patient or personal health representative clicks an appointment to view more details",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "he or she can report the blood pressure systolic and diastolic possibly and possibly glucose levels for the patient",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "note that the administrator is not allowed through the system interface to delete an existing entry or modify the hospital id number in an existing entry",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "system administrators shall monitor message exchanges will predict and determine problems and will also provide internal and external support",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "an hcp chooses to add or edit patient specific instructions document an office visit or modify an already documented office visit",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "he or she can report the height weight possibly and possibly pedometer readings for the patient",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the sending hcp then chooses to save the edits cancel the edits or reenter the data ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the hcp enters a comment for a lab procedure with status as pending",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "click edit to enter any information that may be incomplete",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "if the security question or answer has been set it is not null  present security question and obtain answer ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "an administrator can manage a standardized list of appointment types ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "if a patient has several outpatient visits and is admitted as an inpatient care teams must be able to access the patients clinical history",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the disputes system will provide the user the ability to create or initiate a ticket retrieval request",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a patient has just been diagnosed with a condition and wants to find the lhcps in the area who have handled that condition",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a user a patient or personal health representative views basic information about his or her designated lhcps including the name phone number and contact email information ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the patient is sent a fake email that the hcp has prescribed a medication that he or she is allergic to or that has a known interaction with a drug he or she is taking",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a bolded row for showing the message subject now preceded by re the name of sender and timestamp are then visible in the patient or representatives message inbox",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the hcp chooses a specific referral from the list to view complete details about the referral patient name receiving hcp name and specialty time generated priority office visit date and notes",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the presented patient information shall include each patients name and home phone number so that reminder calls can be made",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "after a message in the message inbox is read ie displayed in a new page the row for the message in the message inbox is not bolded anymore",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "an administrator chooses to maintain the standards list for immunizations  diagnoses  allowable drugs  or allowable physical services ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "this brings up a list of any contacts matching your search parameters",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the lhcp chooses to schedule an appointment with a patient it is assumed that the lhcp and patient have already worked out the details of the appointment in person or via telephone outside of the system",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to maintain or display the formulary with pertinent data by authorized personnel",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "program administrators and nursing staff members shall be able to specify the preferred sequence of classes for a given cohort",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "all credit card information will be secured on the server and only accessible by authorized izogn administrators",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a patient or personal health representative views his or her itrust homepage",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the hcp selects a procedure code a priority from 1 to 3 1most important 3not as important and lab technician listed with his or her specialty and the number of pending lab procedures in his or her priority queue grouped by priority",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "this will present you with a list of all of the contacts currently contained in your address book",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a secret key is personally provided to the user with which the user can reset his or her password",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "an lhcp or uap can add and delete patients from his or her monitoring list",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "on the patient homepage the patient views a notification center",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the hcp selects a patient by typing in the mid of the patient ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the estimator shall search by zipcode with a radius of 30 miles if no parts are found for the preferred parts suppliers",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the hcp is notified of any current or future prescriptions to which the patient has a drug allergy",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the list shows the patient and invoice number as well as the current balance to be paid",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "program administrators and nursing staff members shall be able to add a new clinical site into the system",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "health care personnel hcp all of designated licensed health care professionals licensed health care professionals and unlicensed authorized personnel as defined below",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the counts shown include 1 the number of cases for the exact zip code provided and 2 the number of cases for the region region defined by the zip code that match the first three numbers in the provided zip code eg if zip code 27695 is provided all data with zip code 276xx is analyzed where each x is any digit from 09",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "an hcp chooses to document or edit an office visit",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the patient chooses to request an appointment with an lhcp",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability to limit scheduling to view only add and modify possibly and possibly database maintenance",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a bolded row for showing the message subject the name of the sender and the timestamp is then visible in the patient or representatives message inbox and a fake email is sent to the patient or representative that indicates that he or she has a new message from an lhcp",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the user can choose any diagnosis code and type in the desired patient zip code and a start and end date ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "to do this simply click on the name of the clinic in this case your clinic name here to edit its details",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the hcp can choose to add or remove another registered user as a personal health representative to that patient",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the patient or personal health representative can see an abbreviated health history of their siblings parents and both sets of grandparents for which mids are available in itrust",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the two drugs and a textual description of the possible effects of the interaction are stored",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "he or she can report the height weight possibly and possibly pedometer reading for the patient",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability for users to create manual clinical tasks",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a patient either chooses to input his or her physiologic measurements blood pressure possibly and possibly glucose levels  or to input his or her weight height possibly and possibly pedometer readings ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the lhcp opens the message to which he or she wishes to reply  and then clicks the reply link above the message text",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "once a game is initiated the product shall allow each player to position their 5 ships on their respective defensive grids",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "he or she can select a patient and then enter data",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "customer shall be able to check the status of their prepaid card by entering in the pin number in under 5 seconds",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to not provide patients access to the following protected health information psychotherapy notes information compiled for legal proceedings laboratory results to which the clinical laboratory improvement act clia prohibits access or information held by certain research laboratories",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Reliability",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "allow patient access to his or her own completed records and release of information disclosure log as required by law or agreed to by the clinical provider",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "as part of ticket retrieval creation process the system must prompt the user to enter all the required information to create the ticket retrieval request",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system must prompt the user to enter the required information to initiate a chargeback request",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "doing so brings up a lightbox containing several fields which are searchable labeled in green",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-LookandFeel"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability for users to create their own preferred display formats",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-LookandFeel",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "when streaming a movie the buffering time should take no longer than 10 seconds plus any latency on the users connection",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should capture validation of the correct matching of the patient to the blood product",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Reliability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall provide monitoring services",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Reliability",
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "all movies shall be streamed on demand at any time of the day",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a covered entity must mitigate to the extent practicable any harmful effect that is known to the covered entity of a use or disclosure of protected health information in violation of its policies and procedures or the requirements of this subpart by the covered entity or its business associate",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii the covered health care provider must inform the individual and provide an opportunity to object to uses or disclosures for directory purposes as required by paragraph a2 of this section when it becomes practicable to do so",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "iii a covered entity that agrees to a restriction under paragraph a1i of this section may not use or disclose protected health information in violation of such restriction except that if the individual who requested the restriction is in need of emergency treatment and the restricted protected health information is needed to provide the emergency treatment the covered entity may use the restricted protected health information or may disclose such information to a health care provider to provide such treatment to the individual",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to document encounters by one or more of the following means direct keyboard entry of text structured data entry utilizing templates forms pick lists or macro substitution dictation with subsequent transcription of voice to text either manually or via voice recognition system",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the capability for order entry form on one screen including unit dose and iv",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the disputes application must conform to the legal requirements as specified by regulation e and regulation z that govern credit card disputes processing",
+            "Correct answer": [
+                "NonFunctional-External-Legal"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "upon notice of termination by user cms will cease releasing data from the files to the user under this agreement and will notify the user to destroy such data files",
+            "Correct answer": [
+                "NonFunctional-External-Legal"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "izognmovies shall meet the licensing requirements set forth by the appropriate organizations in order to stream african movies",
+            "Correct answer": [
+                "NonFunctional-External-Legal"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall have the ability to provide support for disclosure management in compliance with hipaa and applicable law",
+            "Correct answer": [
+                "NonFunctional-External-Legal"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "for information requiring cryptographic protection the information solution should implement cryptographic mechanisms that comply with applicable laws executive orders directives policies regulations standards and guidance",
+            "Correct answer": [
+                "NonFunctional-External-Legal"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to support for disclosure management in compliance with hipaa and applicable law",
+            "Correct answer": [
+                "NonFunctional-External-Legal"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "covered entities should provide this individual notice in written form by firstclass mail or alternatively by email if the affected individual has agreed to receive such notices electronically",
+            "Correct answer": [
+                "NonFunctional-External-Legal"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should time stamp initial entry modification or exchange of data and identify the actor or principal taking the action as required by users scope of practice organizational policy or jurisdictional law",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should conform to function in13 entity access control to limit access to audit record information to appropriate entities in accordance with users scope of practice organizational policy or jurisdictional law",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should conform to standard terminologies and terminology services to support terminology standards in accordance with a users scope of practice organizational policy or jurisdictional law",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the secretary adopts the code sets terminology and nomenclature as the vocabulary standard race and ethnicity",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability for attestation of emr content by properly authenticated and authorized users different from the author as required by users scope of practice organizational policy or jurisdictional law",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to document the location and or source of any legal documentation regarding advance directives",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Recoverability",
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to mask parts of the electronic health record eg medications conditions sensitive documents from disclosure according to scope of practice organizational policy or jurisdictional law",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "compliance with these regulations and standard backup procedures will be essential",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Product-Recoverability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "data recipient shall have the right to use all individually identifiable health information iihi provided to it by the data custodian for the research public health or health care operations purposes as listed below be brief but use as much space as necessary",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "this plan must be developed and maintained which complies with all applicable requirements including business associate agreements and state and federal breach reporting requirements",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should have a user interface compliant with american disability act ie section 508 compliant",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "enable a user to create an audit report for a specific time period and to sort entries in the audit log according to each of the data specified in the standards at  170210e",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the audit file will include the time at which the submission was created and any relevant document id tracking numbers generated under the ehr traceability requirement above",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "system monitors user audit logs via an automated process and reports on irregular activity",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should conform to auditable records to audit all changes to workflow control rules",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution audit log should be operational whenever the solution is available for updates or viewing of the clinical record",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the report will be reviewed for auditing purposes",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should generate and embed a document id tracking number for patient chart outputs or exports unique for each instance when a patient chart output or document is printed electronically communicated or otherwise exported from the emr",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to record solution maintenance events for entry to and exit from the emr solution",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should support the use of the national provider identifier npi in the emr audit log to identify the individual provider or in situations when an npi is not available for an individual a single unique internal provider identifier is assigned",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "1i the audit log must record the information specified in sections 72 through 74 76 and 77 of the standard specified at  170210h when ehr technology is in use",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "for login failures the ip address of the machine transaction type  1 and timestamp are recorded",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide reports for records of information solution activity such as audit logs access reports and security incident tracking reports",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the create or disable patients and hcp transaction is logged uc5",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "any exceptions shall be logged or emailed to the appropriate team member",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the event is logged uc5",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to record solution maintenance events for loading new versions of codes and knowledge bases",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should monitor cotsprovided components  services",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Process-Maintenance",
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide time stamps that are synchronized with the authoritative enterprise time server for use in audit record generation",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "system provides configuration user accounts roles and privileges reports",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Process-Operational",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should include gui tools for monitoring of processes and errors",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Process-Operational",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall prohibit all users read access to the audit records except those users that have been granted explicit readaccess",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "implement electronic mechanisms to corroborate that electronic protected health information has not been altered or destroyed in an unauthorized manner",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "generic accounts not linked to a specific person such as service accounts must not be used in accessing phi or pi or in making changes to it systems which protect that data unless there are logs in place that identify the actual individual who accessed the data or made the system change",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "for leads that process longer than 25 seconds the system will record the event and duration",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should alert appropriate organizational officials in the event of an audit processing failure and begins to overwrite oldest audit records or shuts down the solution",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Reliability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "1 an individual has a right to receive an accounting of disclosures of protected health information made by a covered entity in the six years prior to the date on which the accounting is requested except for disclosures",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should support a userfriendly output version of the audit log for transmission printing or export which shows all details of events",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "all nongui classes must have at least 80 percent  unit testing or junit coverage of tests that pass",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "7 hl7 version 3 implementation guide contextaware knowledge retrieval infobutton serviceoriented architecture implementation guide release 1 hl7 draft standard for trial use march 2011 ibr approved for  170204",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "b for the period on and after october 16 2003 asc x12n 834benefit enrollment and maintenance version 4010 may 2000 washington publishing company 004010x095 and addenda to benefit enrollment and maintenance version 4010 october 2002 washington publishing company 004010x095a1",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the code set specified at 45 cfr 1621002a1 for the indicated conditions",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should support version control of the products development test or production configurations via an external management software product",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "c astm international 100 barr harbor drive po box c700 west conshohocken pa 194282959 usa telephone 610 8329585 or http  wwwastmorg ",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "1 iso 6392",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the asc x12n 837health care claim institutional volumes 1 and 2 version 4010 may 2000 washington publishing company 004010x096 and addenda to health care claim institutional volumes 1 and 2 version 4010 october 2002 washington publishing company 004010x096a1",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the presentation layer must only contain systems that provide services directly to the internet",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the code set specified at 45 cfr 1621002c2 for the indicated conditions",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "direct access to the data persistence or database layer is only permitted through a logical data access logic layer using a trusted subsystem that utilizes a single database access account for all transactions",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "2 script standard implementation guide version 106 october 2008 approval date for ansi november 12 2008 ibr approved for  170205",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the asc x12n 837health care claim dental version 4010 may 2000 washington publishing company 004010x097",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the asc x12n 837health care claim dental version 4010 may 2000 washington publishing company 004010x097 and addenda to health care claim dental version 4010 october 2002 washington publishing company 004010x097a1",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall be implemented as a java server page web application",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "logical observation identifiers names and codes loinc database version 240 a universal code system for identifying laboratory and clinical observations produced by the regenstrief institute inc incorporated by reference in  170299",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "h audit log conten t astm e214701reapproved 2009 incorporated by reference in  170299",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the asc x12n 837health care claim professional volumes 1 and 2 version 4010 may 2000 washington publishing company 004010x098",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a for the period from october 16 2002 through october 15 2003 the asc x12n276 or 277 health care claim status request and response version 4010 may 2000 washington publishing company 004010x093",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "all changes updates and additions to the wcs system shall be updated in the wcs developer and wcs user guides",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution functionality and associated business rules shall be configured and reconfigured through tools that do not require code modifications",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the should use a layered architecture where business components or services can be reused across multiple interfaces eg web ivr mobile",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "all transactional data should be stored in a relational database that supports sql",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "any source vocabulary that is included in rxnorm a standardized nomenclature for clinical drugs produced by the united states national library of medicine",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should be extensible where the solution can accommodate new functionality without compromising the systems dependability or future extensibility",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should conform to interchange standards to provide standard data interchange capabilities for using registry services and directories",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance",
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "assign a unique name possibly and possibly number for identifying and tracking user identity and establish controls that permit only authorized users to access electronic health information",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the webenabled portions of the application shall meet stateoftheart internet standards for graphics and design and for speed reliability and security for dynamic content and user interaction",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance",
+                "NonFunctional-Product-Reliability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall continue to operate during upgrade change or new resource addition",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance",
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "online interactive help with support for hyperlink technology and industry standard formats eg html file formats",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should conform to function in251 manage unstructured health record information to ensure data integrity through all changes",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the wcs system shall have the ability to connect other designated wcs databases currently not included in the system",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the maintenance of the product will fall within the established corporate maintenance windows",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the clinical decision support capability should conform to function in51 interchange standards to support interoperability",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product must be able to interface with any html browser",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the cardmember information database provides detailed information with regard to a cardmember",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "7 data files shall be received from the bdw and loaded into the rfs system within 3 hours one day prior to the start of budgeting process every year",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the wcs shall be accessed by users through the internet on an ibm computer running a windows 2000 or above operating system",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should support alert notifications via pager",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should conform to function in252 manage structured health record information to ensure data integrity through all changes",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should conform to function in54 interchange agreements to define how the sender and receiver will exchange data",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "website must be fully operational with msn tv2",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall operate with every platform",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "system restricts access to financial transactions and other sensitive data by authorized users outside the county intranet to read only mode",
+            "Correct answer": [
+                "NonFunctional-Process-Operational",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should support alerts for defined thresholds and errors",
+            "Correct answer": [
+                "NonFunctional-Process-Operational",
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should include a command line interface to allow automation of system processes eg service startup service shutdown",
+            "Correct answer": [
+                "NonFunctional-Process-Operational",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to grant and revoke access to electronic protected health information managed by the solution",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should enforce assigned authorizations for controlling access to the solution in accordance with applicable policy",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall granularly control access rights to all major subsystems",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to define solution and data access rules",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "implement policies and procedures to limit physical access to its electronic information systems and the facility or facilities in which they are housed while ensuring that properly authorized access is allowed",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should implement electronic mechanisms to corroborate that electronic protected health information has not been altered or destroyed in an unauthorized manner",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has capability to accommodate multiple levels of rolebased user access that restrict access to the appropriate role",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "data collection devices eg  handheld devices etc synchronize with the system securely using authentication authorization and encryption mechanisms",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "system provides the ability to specify roles and privileges based on login locations",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": " after installation or upgrade consider removingor ensuring no access to to the following scripts which are not needed for general openemr use",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "roles are mapped to user and data interfaces",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to create and update sets of accesscontrol permissions granted to principals",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to record solution maintenance events for archiving any data",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Recoverability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "i implement administrative physical and technical safeguards that reasonably and appropriately protect the confidentiality integrity and availability of the electronic protected health information that it creates receives maintains or transmits on behalf of the group health plan",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should restrict access and uses of protected health information based on the specific users role",
+            "Correct answer": [
+                "NonFunctional-Product-Accessibility",
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a report is a page which opens in a separate window and contains minimal decoration",
+            "Correct answer": [
+                "NonFunctional-Product-LookandFeel"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall have a professional appearance",
+            "Correct answer": [
+                "NonFunctional-Product-LookandFeel"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall provide portals",
+            "Correct answer": [
+                "NonFunctional-Product-LookandFeel"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product must comply with the intranet page standards and requirements of enet securities",
+            "Correct answer": [
+                "NonFunctional-Product-LookandFeel"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall have a conservative and professional appearance",
+            "Correct answer": [
+                "NonFunctional-Product-LookandFeel"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the tree view navigation scheme presents the same hierarchical navigation list as the sliding menu but without the icons  menubutton styling",
+            "Correct answer": [
+                "NonFunctional-Product-LookandFeel"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the rms system shall have windows xp look and feel and use gui futures making its use intuitive",
+            "Correct answer": [
+                "NonFunctional-Product-LookandFeel",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should support floor stock distribution method",
+            "Correct answer": [
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall include documentation of product capacities eg number of users number of transactions per second number of records network load etc and the baseline representative configurations assumed for these capacities eg number or type of processors server or workstation configuration and network capacity etc",
+            "Correct answer": [
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall process messages within 2 seconds",
+            "Correct answer": [
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the recycled parts audit report shall be returned to the user within 10 seconds",
+            "Correct answer": [
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the response time of general student management tasks shall take no longer than 5 seconds and the response time of schedule generation shall take no longer than 30 seconds",
+            "Correct answer": [
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should store seven 7 years of patientinmate information within the operational data store",
+            "Correct answer": [
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall be capable of handling the existing 1000 users",
+            "Correct answer": [
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the search for recycled parts shall take no longer than 15 seconds",
+            "Correct answer": [
+                "NonFunctional-Product-PerformanceandScalability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution shall track system uptime and transaction response times in order to demonstrate operation within acceptable levels",
+            "Correct answer": [
+                "NonFunctional-Product-PerformanceandScalability",
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system should have ability to run a backup concurrently with the operation of the application",
+            "Correct answer": [
+                "NonFunctional-Product-Recoverability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "if included the drp must include strategies for recovery and procedures for testing the drp",
+            "Correct answer": [
+                "NonFunctional-Product-Recoverability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall retain user preferences in the event of a failure",
+            "Correct answer": [
+                "NonFunctional-Product-Recoverability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "establish and implement as needed policies and procedures for responding to an emergency or other occurrence for example fire vandalism system failure and natural disaster that damages systems that contain electronic protected health information",
+            "Correct answer": [
+                "NonFunctional-Product-Recoverability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should be configurable to prevent corruption or loss of data already accepted into the system in the event of a system failure eg integrating with a ups etc",
+            "Correct answer": [
+                "NonFunctional-Product-Recoverability",
+                "NonFunctional-Product-Reliability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the ehr system shall be able to perform realtime data redundancy on independent storage devices",
+            "Correct answer": [
+                "NonFunctional-Product-Recoverability",
+                "NonFunctional-Product-Reliability",
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "if the system claims to be available 24 by 7 then the system shall have ability to run a backup concurrently with the operation of the application",
+            "Correct answer": [
+                "NonFunctional-Product-Recoverability",
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "system supports integrity mechanisms for transmission of both incoming and outgoing files such as parity checks and cyclic redundancy checks crcs",
+            "Correct answer": [
+                "NonFunctional-Product-Reliability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall validate client input on the server side to the extent possible",
+            "Correct answer": [
+                "NonFunctional-Product-Reliability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": " put equipment on a ups to prevent data loss and downtime in a power outage spike or sag",
+            "Correct answer": [
+                "NonFunctional-Product-Reliability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should be stable and will operate for sustained amounts of time without interruption",
+            "Correct answer": [
+                "NonFunctional-Product-Reliability",
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall be available 24 hours per day seven days per week",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall support transparent resource addition and dynamic change support to provide scalability and avoid service interruptions of more than 1 day",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the rfs system should be available 24 by 7 especially during the budgeting period",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Availability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii the group health plan or a health insurance issuer or hmo with respect to the group health plan may disclose summary health information to the plan sponsor if the plan sponsor requests the summary health information for the purpose of ",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "b the right to receive confidential communications of protected health information as provided by 164522b as applicable",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "in order to comply with 164502b and this section a covered entity must meet the requirements of paragraphs d2 through d5 of this section with respect to a request for or the use and disclosure of protected health information",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "on this page is displayed recommendations and warnings regarding directories apache should not allow the outside world to see as these directories contain protected health information",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "c the employer needs such findings in order to comply with its obligations under 29 cfr parts 1904 through 1928 30 cfr parts 50 through 90 or under state law having a similar purpose to record such illness or injury or to carry out responsibilities for workplace medical surveillance and",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii a covered entity may use or disclose protected health information to notify or assist in the notification of including identifying or locating a family member a personal representative of the individual or another person responsible for the care of the individual of the individuals location general condition or death",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "2 use appropriate safeguards to prevent use or disclosure of the information other than as provided for by the data use agreement",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "c use or disclosure by the covered entity to defend itself in a legal action or other proceeding brought by the individual and",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii a covered entity is not required to agree to a restriction",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should use notification message provides appropriate privacy and security notices based on associated privacy and security policies or summaries and remains on the screen until the user takes explicit actions to log on to the information solution",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii a covered entity must reasonably safeguard protected health information to limit incidental uses or disclosures made pursuant to an otherwise permitted or required use or disclosure",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "b if and to the extent prohibited by an applicable provision of state or other law including applicable case law a covered entity may not disclose or provide access in accordance with 164524 to protected health information about an unemancipated minor to a parent guardian or other person acting in loco parentis and",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "ii when a covered entity changes a privacy practice that is stated in the notice described in 164520 and makes corresponding changes to its policies and procedures it may make the changes effective for protected health information that it created or received prior to the effective date of the notice revision if the covered entity has in accordance with 164520b1vc included in the notice a statement reserving its right to make such a change in its privacy practices or",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution deidentification capability should include web universal resource locators urls",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a a description including at least one example of the types of uses and disclosures that the covered entity is permitted by this subpart to make for each of the following purposes treatment payment and health care operations",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "b requires the return to the covered entity or destruction of the protected health information including all copies made at the end of the litigation or proceeding",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should have the ability to deidentify health information which neither identifies nor provides a reasonable basis to identify an individual",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a covered entity may use or disclose protected health information without the written authorization of the individual as described in 164508 or the opportunity for the individual to agree or object as described in 164510 in the situations covered by this section subject to the applicable requirements of this section",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "a covered entity must implement policies and procedures with respect to protected health information that are designed to comply with the standards implementation specifications or other requirements of this subpart",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution deidentification capability should include electronic mail addresses",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "d the right to amend protected health information as provided by 164526",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "callers and supervisors must be able to accomplish any system task within 2 minutes",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "80 percent  of the users surveyed report they are regularly using the product after the first 2 weeks postlaunch",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the data elements required to complete a job function whether to inquire or read only or data entry must be readily available",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall help the user avoid making mistakes while scheduling classes and clinicals for the nursing students",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "iii the covered entity informs the individual that it is terminating its agreement to a restriction except that such termination is only effective with respect to protected health information created or received after it has so informed the individual",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "note clicking the calendar button next to the dob field will pop up an easy to use date selection tool found throughout the openemr program",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "callers and supervisors shall learn how to use the system within 10 minutes",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "90 percent  of users will be able to successfully reserve a conference room within 5 minutes of product use",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall be used by realtors with no training",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to access to a library of educational material for health concerns conditions possibly and possibly diagnosis",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "he or she can report his or her daily height in the format of digits xxxx with the units of feet daily weight in the format of digits x with units of lbs possibly and possibly pedometer readings in the format of up to 10 digits of integer with units of footsteps ",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "if the file is malformed then no data is added and an error message explaining the correct file structure is presented",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system has the ability to archive patients results and retrieve them when they return to the facility",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "2 a covered entity may disclose protected health information for treatment activities of a health care provider",
+            "Correct answer": [
+                "NonFunctional-Product-Security-Privacy"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall conform to the americans with disabilities act",
+            "Correct answer": [
+                "NonFunctional-External-Legal",
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall generate charts and graphs based on report data within the system",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the administrator can select a particular pair of drugs and delete the interaction between the two drugs",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should provide the ability to restrict task assignment based on appropriate role as defined by the entity",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall use symbols and words that are naturally understandable by the user community",
+            "Correct answer": [
+                "NonFunctional-Product-Usability"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "4 the asc x12n 835health care claim payment or advice version 4010 may 2000 washington publishing company 004010x091 and addenda to health care claim payment or advice version 4010 october 2002 washington publishing company 004010x091a1 as referenced in 1621602",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "once a game is initiated the product shall display an offensive grid to each player",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the health care personnel enters a mid of a patient and confirms their selection ",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the patient family  care giver education capability should provide nonrepudiation requirements in 15 that guarantees that the sources and receivers of data cannot deny that they entered or sent or received the data",
+            "Correct answer": [
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the product shall poll the system for new messages at a maximum of every 1 second",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "i the contract or other arrangement between the covered entity and the business associate required by 164502e2 must meet the requirements of paragraph e2 or e3 of this section as applicable",
+            "Correct answer": [
+                "Functional"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall allow authorized users to update the directory",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the clinical decision support capability should conform to function in52 interchange standards versioning and maintenance to accommodate the inevitable evolution of interchange standards",
+            "Correct answer": [
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "selecting add new presents a form for adding this providers numbers for another insurance company",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Product-Accessibility"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the clinical decision support capability should conform to function in42 maintenance and versioning of standard terminologies to preserve the semantics of coded data over time",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to record that patient specific instructions or educational material were provided to the patient",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-External-Legal-Audit"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the solution should conform to function in16 secure data exchange to provide secure data exchange capabilities",
+            "Correct answer": [
+                "NonFunctional-Process-Operational"
+            ]
+        }
+    },
+    {
+        "Example": {
+            "Description": "the system shall provide the ability to capture and maintain as discrete data the reason for variation from rulebased clinical messages for example alerts and reminders",
+            "Correct answer": [
+                "Functional",
+                "NonFunctional-Process-Maintenance"
+            ]
+        }
+    }
+]

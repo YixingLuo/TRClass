@@ -1,0 +1,101 @@
+{
+    "name": "root",
+    "children": [
+        {
+            "name": "Functional",
+            "children": [],
+            "features": []
+        },
+        {
+            "name": "NonFunctional",
+            "children": [
+                {
+                    "name": "External",
+                    "children": [
+                        {
+                            "name": "Legal",
+                            "children": [],
+                            "features": []
+                        }
+                    ],
+                    "features": []
+                },
+                {
+                    "name": "Product",
+                    "children": [
+                        {
+                            "name": "LookandFeel",
+                            "children": [],
+                            "features": []
+                        },
+                        {
+                            "name": "Security",
+                            "children": [
+                                {
+                                    "name": "Privacy",
+                                    "children": [],
+                                    "features": []
+                                },
+                                {
+                                    "name": "Audit",
+                                    "children": [],
+                                    "features": []
+                                },
+                                {
+                                    "name": "Availability",
+                                    "children": [],
+                                    "features": []
+                                }
+                            ],
+                            "features": []
+                        },
+                        {
+                            "name": "Reliability",
+                            "children": [],
+                            "features": []
+                        },
+                        {
+                            "name": "Recoverability",
+                            "children": [],
+                            "features": []
+                        },
+                        {
+                            "name": "Usability",
+                            "children": [],
+                            "features": []
+                        },
+                        {
+                            "name": "Accessibility",
+                            "children": [],
+                            "features": []
+                        },
+                        {
+                            "name": "PerformanceandScalability",
+                            "children": [],
+                            "features": []
+                        }
+                    ],
+                    "features": []
+                },
+                {
+                    "name": "Process",
+                    "children": [
+                        {
+                            "name": "Maintenance",
+                            "children": [],
+                            "features": []
+                        },
+                        {
+                            "name": "Operational",
+                            "children": [],
+                            "features": []
+                        }
+                    ],
+                    "features": []
+                }
+            ],
+            "features": []
+        }
+    ],
+    "features": []
+}
