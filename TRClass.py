@@ -442,31 +442,49 @@ def multi_choice_recursive_classify(
 
             if current_depth == 0:
                 user_prompt = (
+                    ### Task Description ###
                     f"Please follow the steps and choose correct answers from the following {len(child_nodes)} options as the requirements class according to requirement description.\n"
+                    ### Example ###
                     f"Below are some similar requirement examples:\n"
                     f"{example_text}\n\n"
-                    f"Step 1: Analyze the meaning of the requirements description provided.\n"
+                    ### Instruction ###
+                    # Step 1: Requirement Analysis
+                    f"Step 1: Analyze the meaning of the requirements description provided.\n" 
+                    # Step 2: Class Definition Check
                     f"Step 2: Analyze the definition of each requirements class and check whether the given requirements description belongs to this class.\n"
+                    # Step 3: Select Correct Class
                     f"Step 3: Choose correct answers of requirements class options that is suitable for the given requirement description.\n"
+                    # Step 4: Answer Validation
                     f"Step 4: Check whether your answer is right or not.\n"
+                    # Step 5: Answer Format
                     f"Step 5: Take the similar requirements description shown in the example to answer this question.\n"
+                    ### Input ###
                     f"###Requirement Description###\n{requirement}\n"
                     f"###Current Chosen Path###\n{father_path}\n"
                     f"###Options###\n{child_node_str}\n"
+                    ### Output Format ###
                     f"Please pick up to {top_k_per_level} sub-options, your answer format should be:\n"
                     f"Answer: A, C\nScores: A(0.8), C(0.6)\n"
                     f"###Answer###"
                 )
             elif current_depth == 0:
                 user_prompt = (
+                    ### Task Description ###
                     f"Please follow the steps and choose correct answers from the following {len(child_nodes)} options as the requirements class according to requirement description.\n"
+                    ### Instruction ###
+                    # Step 1: Requirement Analysis
                     f"Step 1: Analyze the meaning of the requirements description provided.\n"
+                    # Step 2: Class Definition Check
                     f"Step 2: Analyze the definition of each requirements class and check whether the given requirements description belongs to this class.\n"
+                    # Step 3: Select Correct Class
                     f"Step 3: Choose correct answers of requirements class options that is suitable for the given requirement description.\n"
+                    # Step 4: Answer Validation
                     f"Step 4: Check whether your answer is right or not.\n"
+                    ### Input ###
                     f"###Requirement Description###\n{requirement}\n"
                     f"###Current Chosen Path###\n{father_path}\n"
                     f"###Options###\n{child_node_str}\n"
+                    ### Output Format ###
                     f"Please pick up to {top_k_per_level} sub-options, your answer format should be:\n"
                     f"Answer: A, C\nScores: A(0.8), C(0.6)\n"
                     f"Only give the final answer, do not explain anything.\n"
